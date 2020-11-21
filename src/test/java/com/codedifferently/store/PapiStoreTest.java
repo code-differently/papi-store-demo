@@ -9,8 +9,13 @@ import org.junit.Test;
 // This is a public class called Papi
     public class PapiStoreTest {
 
+        // create a variable to store our object in - outside of the scope of the methods.
+        // the "ID" of our object.
         PapiStore papiStore;
 
+        //fixture annotation -
+        // creates a new object and stores it in the papistore variable.
+        // the method sets up our state by assigning values.
         @Before
         public void setup(){
             papiStore = new PapiStore();
@@ -20,6 +25,8 @@ import org.junit.Test;
             papiStore.owesPapiMoney.put("Victor", 7.0);
         }
 
+        //Test fixture annotation runs the open store test.
+        //Asks if we open the store if its state changes to open!
         @Test
         public void OpenStoreTest(){
             //Given
